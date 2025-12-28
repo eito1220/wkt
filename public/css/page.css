@@ -1,47 +1,79 @@
 body, html {
+    /* 既存のレイアウト設定 */
     max-width: 100%;
     overflow-wrap: break-word;
     word-wrap: break-word;
     overflow-x: auto;
     white-space: normal;
     word-break: break-all;
+    
+    /* 🎨 全体の見た目の改善 */
+    background-color: #f8f9fa; /* わずかにグレーな背景でモダンに */
+    font-family: "Helvetica Neue", Arial, sans-serif; /* モダンなフォントに */
+    color: #343a40; /* 文字色を真っ黒から濃いグレーに */
 }
-.back-button {
-   transition: transform 0.3s ease-in-out;
+
+/* 🔙 戻るボタン/リンクボタンの改善 */
+.back-button, .link-button {
+    /* 既存のトランジションを更新 */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+    border-radius: 4px; /* 角をわずかに丸く */
 }
-.back-button:hover {
-   transform: scale(1.1);
+
+.back-button:hover, .link-button:hover {
+    /* 拡大を控えめにし、影を追加して立体感を出す */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
 }
-.link-button {
-   transition: transform 0.3s ease-in-out;
-}
-.link-button:hover {
-   transform: scale(1.1);
-}
+
+/* 🖼️ 検索結果アイテム（カード）の改善 */
 .result-item {
-  transition: transform 0.2s;
+    /* 既存のトランジションを更新 */
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 6px; /* 角を丸く */
+    background-color: white; /* 背景を白くして、影で浮き上がらせる */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 非常に薄い影 */
 }
+
 .result-item:hover {
-  transform: scale(1.03);
+    /* ホバーで影を強調 */
+    transform: scale(1.03); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* 💡 非表示要素（既存を維持） */
 .hidden {
     display: none;
 }
+
+/* 🔗 リンクテキストの改善 */
 .description a {
-    color: #4a77a8;
+    /* 既存の色からモダンなアクセントカラーに変更 */
+    color: #007bff; /* 青をアクセントカラーとして使用 */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+.description a:hover {
+    color: #0056b3; /* ホバーで色を濃くする */
+}
+
+/* 🖼️ サムネイル（既存を維持） */
 .thumbnail {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
+/* ⏱️ 動画時間表示の改善 */
 .video-duration {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 2px 4px;
-  border-radius: 2px;
-  font-size: 12px;
+    position: absolute;
+    bottom: 4px; /* 位置を少し調整 */
+    right: 4px; /* 位置を少し調整 */
+    background-color: rgba(0, 0, 0, 0.85); /* 背景をより濃くして視認性アップ */
+    color: white;
+    padding: 3px 6px; /* パディングを増やして見やすく */
+    border-radius: 4px; /* 角を少し大きく丸く */
+    font-size: 11px; /* フォントを少し小さくして洗練された印象に */
+    font-weight: bold; /* フォントを太字にする */
 }
